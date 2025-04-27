@@ -1,0 +1,18 @@
+type: entities
+title: Cannabis Inventory
+show_header_toggle: false
+entities:
+  - entity: sensor.cannabis_blue_dream
+    name: Blue Dream (Hybrid) – {{ state_attr('sensor.cannabis_blue_dream', 'quantity') }} g
+    icon: mdi:leaf
+  - entity: sensor.cannabis_northern_lights
+    name: Northern Lights (Indica) – {{ state_attr('sensor.cannabis_northern_lights', 'quantity') }} g
+    icon: mdi:leaf
+  - type: call-service
+    name: "➕ Add New Strain"
+    icon: mdi:plus-circle
+    service: cannabis_tracker.add_strain
+    service_data:
+      name: "New Strain Name"
+      type: "Hybrid"
+      quantity: 0

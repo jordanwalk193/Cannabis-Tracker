@@ -1,0 +1,36 @@
+add_strain:
+  description: "Add a new cannabis strain to the inventory."
+  fields:
+    name:
+      description: "Name of the strain to add."
+      example: "Blue Dream"
+    type:
+      description: "Type of strain (indica, sativa, hybrid)."
+      example: "Hybrid"
+    quantity:
+      description: "Initial quantity in grams."
+      example: 5.0
+    purchase_date:
+      description: "Purchase date (optional, YYYY-MM-DD)."
+      example: "2025-04-10"
+    rating:
+      description: "Personal rating 1–5 (optional)."
+      example: 5
+    notes:
+      description: "Notes or effects (optional)."
+      example: "Very relaxing, helps with sleep."
+update_strain:
+  description: "Update the quantity, rating, or notes of an existing strain."
+  fields:
+    name:
+      description: "Name of the strain to update."
+      example: "Blue Dream"
+    quantity:
+      description: "New quantity in grams (optional)."
+      example: 4.0
+    rating:
+      description: "New rating 1–5 (optional)."
+      example: 4
+    notes:
+      description: "New notes or effects (optional)."
+      example: "Reduced anxiety, mild couch-lock."
